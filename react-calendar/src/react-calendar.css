@@ -1,0 +1,243 @@
+body {
+	/*max-width: 480px;*/
+}
+
+#calendar {
+	padding: 10px;
+}
+
+.fixedScoll {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+}
+
+/* React-Class: Calendar */
+.calendarTable {
+	border-spacing: initial;
+	border-collapse: separate;
+	border-color: white;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 30px;
+	border-collapse:collapse;
+}
+
+.calendarTable .thead tr th {
+	padding: 10px 0;
+	color: #666;
+	font-weight: normal;
+	overflow: hidden;
+}
+
+/* React-Class: CalendarCell */
+.calendarCell {
+	background-color: #fff;
+	color: #333;
+	border-width: 1px;
+	border-color: #c3def2;
+	border-style: solid;
+	cursor: pointer;
+}
+
+.calendarCell.shadowCell {
+	background-color: #f2f2f2;
+	color: #848484;
+}
+
+.calendarCell:hover {
+	/*border-color: #375a93;*/
+	cursor: pointer;
+}
+
+.calendarCell.shadowCell:hover {
+	cursor: auto;
+}
+
+.calendarCell .calendarCellBox {
+	min-height: 50px;
+	position: relative;
+}
+
+.calendarCell .calendarCellBox.cellHasPerson {
+	background-color: #375a93;
+	color: #fff;
+}
+
+.calendarCell.shadowCell .calendarCellBox.cellHasPerson {
+	background-color: #f2f2f2;
+	color: #848484;
+}
+
+.calendarCell .calendarCellBox .date {
+	text-align: center;
+	position: relative;
+}
+
+.calendarCell .calendarCellBox .date .dateText {
+	padding-top: 5px;
+	display: block;
+}
+
+/*.calendarCell .calendarCellBox:hover {
+	background-color: #375a93;
+	color: #fff;
+}*/
+
+.calendarCell .calendarCellBox .entry {
+	position: absolute;
+	bottom: 5px;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+/*.calendarCell .calendarCellBox .entry:hover {
+	background-color: #375a93;
+}*/
+
+.calendarCell .calendarCellBox .entry span:hover {
+	/*color: #fff;*/
+}
+
+.calendarCell .calendarCellBox .entry span::before {
+/*	margin-left: 1px;
+	margin-right: 2px;*/
+}
+
+.calendarBody {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.yeaarTitle {
+	text-align: center;
+	background-color: #375a93;
+	color: #fff;
+	padding: 10px 0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.datetimeWheel {
+	display: none;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 250px;
+	overflow: hidden;
+	background-color: #fff;
+	z-index: 999;
+}
+
+.datetimeBar {
+	background-color: #f1f1f1;
+	color: #333;
+	padding: 15px 10px;
+	overflow: hidden;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.datetimeBg {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: 0.6;
+}
+
+.datetimeSelect {
+	overflow: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	overflow: auto;
+}
+
+.datetimeModify {
+	border-right: 1px solid #d3d3d3;
+	padding-right: 8px;
+}
+
+.hourSelect {
+	width: 50%;
+	float:left;
+	text-align: center;
+	height: 200px;
+	overflow: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    display: inline-block;
+}
+
+.timeSelect {
+	width: 50%;
+	text-align: center;
+	height: 200px;
+	overflow: auto;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	right: 0;
+}
+
+.selectLine {
+	height: 40px;
+	overflow: hidden;
+	border-top: 1px solid #cacaca;
+	border-bottom: 1px solid #cacaca;
+	position: absolute;
+	top: 80px;
+	left: 0;
+	right: 0;
+	display: block;
+}
+
+.datetimeModify, .datetimeSure {
+	color: #375a93;
+	cursor: pointer;
+	float: right;
+	padding-left: 8px;
+}
+
+.hourSelect ul, .timeSelect ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+.hourSelect li, .timeSelect li {
+	line-height: 40px;
+	height: 40px;
+	color: #a3a3a3;
+	font-size: 14px;
+}
+
+.selectItem span {
+	color: #333;
+	font-size: 22px;
+}
+
+.nearby span {
+	color: #666;
+	font-size: 18px;
+}
+
+.datetimeTitle {
+	float: left;
+}
+
+.hourVal, .timeVal {
+	font-style: normal;
+}

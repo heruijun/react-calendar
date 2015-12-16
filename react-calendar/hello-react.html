@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>面试时间安排</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1;charset=utf-8">
+    <script src="src/underscore.js"></script>
+    <script src="src/backbone.js"></script>
+    <script src="src/backbone.localStorage.js"></script>
+    <script src="src/react-0.13.1.js"></script>
+    <script src="src/JSXTransformer-0.13.1.js"></script>
+    <script type="text/jsx" src="src/react-calendar.js"></script>
+    <link rel="stylesheet" href="src/react-calendar.css">
+    <link rel="stylesheet" href="src/normalize.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 格式日如果不足2位数，前面一定要补上0，否则IOS不识别
+        var personOnDays = [
+            {day:'2015-11-01',person:5},
+            {day:'2015-11-19',person:6},
+            {day:'2015-11-20',person:6},
+            {day:'2015-12-08',person:2},
+            {day:'2015-12-10',person:10},
+            {day:'2016-01-08',person:3}
+        ];
+
+        // 修改按钮点击回调
+        function onTimeModify(){
+
+        }
+
+        // 确认按钮点击回调，可以做确认框的提示
+        function onSelectFinish(date,time){
+            console.log(date + '，时间: ' + time);
+            // 这里写弹出层代码
+        }
+    </script>
+    <div id="calendar"></div>
+</body>
+</html>
